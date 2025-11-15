@@ -14,7 +14,7 @@ Original file is located at
 import pandas as pd
 
 # Cargamos el archivo CSV que contiene los datos históricos de alquiler
-df = pd.read_csv("/content/drive/MyDrive/Datos/Aerator.csv")
+df = pd.read_csv("Aerator.csv")
 
 # Mostramos los primeros registros para verificar la estructura
 print("Vista previa de la base de datos:")
