@@ -10,11 +10,21 @@ Original file is located at
 # Programa: Sistema básico de alquiler de maquinaria
 # Empresa: ConstruRent
 
-# Importamos la librería pandas para manejar la base de datos
+import streamlit as st
 import pandas as pd
 
-# Cargamos el archivo CSV que contiene los datos históricos de alquiler
-df = pd.read_csv("Aerator.csv")
+st.title("Predicción de Inventario")
+
+uploaded_file = st.file_uploader("Carga tu archivo CSV", type=["csv"])
+if uploaded_file:
+    df = pd.read_csv(uploaded_file)
+    st.write("Datos cargados:")
+    st.dataframe(df)
+    # Aquí puedes aplicar tu modelo de predicción
+
+
+# Importamos la librería pandas para manejar la base de datos
+import pandas as pd
 
 # Mostramos los primeros registros para verificar la estructura
 print("Vista previa de la base de datos:")
